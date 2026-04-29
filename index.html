@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBank AI | Next-Gen Cinematic AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; overflow-x: hidden; }
+
+        /* Navbar */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 25px 8%; position: absolute; width: 100%; z-index: 100; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; }
+        .logo span { color: #00f2ff; text-shadow: 0 0 10px #00f2ff; }
+        .nav-links { list-style: none; display: flex; gap: 30px; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: #00f2ff; }
+
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        #hero-video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
+        .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 20%, #050505 130%); }
+
+        .hero-content { z-index: 10; padding: 0 20px; }
+        .hero-content h1 { font-size: clamp(40px, 8vw, 90px); line-height: 0.9; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
+        .hero-content h1 span { color: transparent; -webkit-text-stroke: 1px #fff; opacity: 0.7; }
+        .hero-content p { font-size: 18px; color: #aaa; max-width: 650px; margin: 0 auto 40px; line-height: 1.6; }
+
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; }
+        .btn-primary { padding: 18px 40px; background: #fff; color: #000; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 14px; }
+        .btn-primary:hover { background: #00f2ff; box-shadow: 0 0 30px rgba(0, 242, 255, 0.6); transform: scale(1.05); }
+        .btn-secondary { padding: 18px 40px; border: 1px solid rgba(255,255,255,0.3); color: #fff; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 14px; background: rgba(255,255,255,0.05); backdrop-filter: blur(5px); }
+
+        /* Showcase Section */
+        .showcase { padding: 100px 8%; background: #050505; text-align: center; }
+        .showcase h2 { font-size: 45px; font-weight: 900; margin-bottom: 10px; letter-spacing: -1px; }
+        .sub-text { color: #666; margin-bottom: 60px; font-size: 14px; text-transform: uppercase; letter-spacing: 3px; }
+
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .video-card { background: #0a0a0a; border-radius: 12px; overflow: hidden; border: 1px solid #1a1a1a; transition: 0.5s; position: relative; }
+        .video-card:hover { border-color: #00f2ff; transform: translateY(-10px); }
+        
+        .video-wrapper { position: relative; width: 100%; padding-top: 56.25%; overflow: hidden; }
+        .video-card video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+
+        .card-info { padding: 25px; text-align: left; }
+        .card-info .tag { color: #00f2ff; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        .card-info h3 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .card-info p { color: #555; font-size: 14px; line-height: 1.5; }
+
+        footer { padding: 40px; text-align: center; color: #333; font-size: 12px; border-top: 1px solid #111; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DEVBANK<span>.AI</span></div>
+        <ul class="nav-links">
+            <li><a href="#showcase">Showcase</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="pilot-ad.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>CINEMATIC AI,<br><span>BEYOND BOUNDARIES.</span></h1>
+            <p>DevBank AI is engineering the future of high-consistency generative video for the next generation of filmmakers.</p>
+            <div class="cta-buttons">
+                <a href="#showcase" class="btn-primary">View Lab</a>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="showcase" class="showcase">
+        <h2>THE LAB</h2>
+        <p class="sub-text">Experimental Neural Renders</p>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline><source src="Female_pilot_with_cybernetic_eyes_202604291106.mp4" type="video/mp4"></video>
+                </div>
+                <div class="card-info">
+                    <span class="tag">Character Detail</span>
+                    <h3>Cybernetic Interface</h3>
+                    <p>Testing micro-facial movements and ocular glow consistency.</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline><source src="3D_neural_network_glowing_particles_202604291025.mp4" type="video/mp4"></video>
+                </div>
+                <div class="card-info">
+                    <span class="tag">Visualization</span>
+                    <h3>Neural Core</h3>
+                    <p>Dynamic particle mapping of a latent digital brain.</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline><source src="Floating_silver_monolith_jungle_202604291028.mp4" type="video/mp4"></video>
+                </div>
+                <div class="card-info">
+                    <span class="tag">Environment</span>
+                    <h3>Monolith Stress-Test</h3>
+                    <p>Organic biome interaction with metallic reflections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 DEVBANK.AI | DESIGNED FOR THE FUTURE</footer>
+</body>
+</html>
